@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" dir="ltr">
+    <head>
+        <title>Burgercom Technologies</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Custom programming services. Web development with openness, standards, simplicity, usability and accessibility.">
+
+        {% block meta_extra %}{% endblock  %}
+
+        <link href="{{ MEDIA_URL }}css/undo.css" rel="stylesheet" type="text/css">
+        <link href="{{ MEDIA_URL }}css/main.css" rel="stylesheet" type="text/css">
+        <!--[if lt IE 7]>
+            <link href="/223/media/css/ie.css" rel="stylesheet" type="text/css"/>
+        <![endif]-->
+        {% block stylesheet_extra %}{% endblock  %}
+        {% block rss_extra %}{% endblock %}
+
+        {% block script_extra %}{% endblock  %}
+    </head>
+
+    <body class="{{ section|default:"home" }}">
+
+	<div id="top">
+		<div id="header">
+			<ul class="nav">
+				<li><a id="home" href="/">home</a></li>
+				<!--<li><a id="portfolio" href="portfolio.html">portfolio</a></li>-->
+				<li><a id="people" href="/people/">people</a></li>
+				<li><a id="contact" href="/contact/">contact us</a></li>
+			</ul>
+		</div>
+		<div id="pic"><img width="550" src="{{ MEDIA_URL }}images/logo1.png"/></div>
+	</div>
+	<div id="content">
+		<a name="maincontent" id="maincontent"></a>
+        {% block content %}{% endblock content %}
+		<div class="clear"></div>
+    </div>
+    </body>
+</html>

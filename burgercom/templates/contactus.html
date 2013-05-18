@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block stylesheet_extra %}
+<style>
+table.contact tr td {
+    padding: 5px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="left rtb">
+
+{% if sent_message %}
+    <div>{{ sent_message }}</div>
+{% endif %}
+
+<h2>Send us a message</h2>
+<br/>
+    <form action="" method="post">
+        {{ form }}
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
+<div class="right rtb">
+<h2>Contact Details</h2>
+<br/>
+<table class="contact">
+    <tr>
+        <td>Address:</td>
+        <td>42 Malleson Rd, Mowbray, 7700</td>
+    </tr>
+    <tr>
+        <td>Telephone:</td>
+        <td>078 014 2469</td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><a href="mailto:info@burgercom.co.za">info@burgercom.co.za</a></td>
+    </tr>
+</table>
+</div>
+{% endblock %}
